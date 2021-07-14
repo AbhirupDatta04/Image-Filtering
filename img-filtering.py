@@ -1,3 +1,5 @@
+
+#Step 1
 #Image Filtering using mean filter
 import numpy as np
 import cv2
@@ -15,3 +17,17 @@ plt.xticks([]), plt.yticks([])
 plt.subplot(122), plt.imshow(cv2.cvtColor(new_img, cv2.COLOR_HSV2RGB)),plt.title('Using Mean filter')
 plt.xticks([]), plt.yticks([])
 plt.show() 
+
+
+#Step 2
+# The image will first be converted to grayscale
+img2 = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
+img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+fig_size = 9
+new_img = cv2.blur(img2,(fig_size, fig_size))
+plt.figure(figsize=(11,6))
+plt.subplot(121), plt.imshow(img2, cmap='gray'),plt.title('Original')
+plt.xticks([]), plt.yticks([])
+plt.subplot(122), plt.imshow(new_img, cmap='gray'),plt.title('Using Mean filter -Gray')
+plt.xticks([]), plt.yticks([])
+plt.show()

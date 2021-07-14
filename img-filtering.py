@@ -42,3 +42,15 @@ plt.xticks([]), plt.yticks([])
 plt.subplot(122), plt.imshow(cv2.cvtColor(new_img, cv2.COLOR_HSV2RGB)),plt.title('Using Gaussian Filter')
 plt.xticks([]), plt.yticks([])
 plt.show()
+
+
+
+#Step 4
+#grayscale Gaussian filtering
+new_img_gauss = cv2.GaussianBlur(img2, (fig_size, fig_size),0)
+plt.figure(figsize=(11,6))
+plt.subplot(121), plt.imshow(img2, cmap='gray'),plt.title('Original')
+plt.xticks([]), plt.yticks([])
+plt.subplot(122), plt.imshow(new_img_gauss, cmap='gray'),plt.title('Gaussian Filter-Gray')
+plt.xticks([]), plt.yticks([])
+plt.show()

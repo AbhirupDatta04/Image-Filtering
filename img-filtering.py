@@ -54,3 +54,14 @@ plt.xticks([]), plt.yticks([])
 plt.subplot(122), plt.imshow(new_img_gauss, cmap='gray'),plt.title('Gaussian Filter-Gray')
 plt.xticks([]), plt.yticks([])
 plt.show()
+
+#Step 5
+#Median Filtering
+new_img = cv2.medianBlur(img, fig_size)
+plt.figure(figsize=(11,6))
+plt.subplot(121), plt.imshow(cv2.cvtColor(img, cv2.COLOR_HSV2RGB)),plt.title('Original')
+plt.xticks([]), plt.yticks([])
+plt.subplot(122), plt.imshow(cv2.cvtColor(new_img, cv2.COLOR_HSV2RGB)),plt.title('Using Median Filter')
+plt.xticks([]), plt.yticks([])
+plt.show()
+

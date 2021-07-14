@@ -65,3 +65,13 @@ plt.subplot(122), plt.imshow(cv2.cvtColor(new_img, cv2.COLOR_HSV2RGB)),plt.title
 plt.xticks([]), plt.yticks([])
 plt.show()
 
+
+#Step 6
+new_img = cv2.medianBlur(img2, fig_size)
+plt.figure(figsize=(11,6))
+plt.subplot(121), plt.imshow(img2, cmap='gray'),plt.title('Original')
+plt.xticks([]), plt.yticks([])
+plt.subplot(122), plt.imshow(new_img, cmap='gray'),plt.title('Using Median Filter-Gray')
+plt.xticks([]), plt.yticks([])
+plt.show()
+
